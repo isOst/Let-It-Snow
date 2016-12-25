@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ley It SNOW!!!</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+<!-- header -->
+  <div class = "header">
+    <p>Give me an advise on:  
+      <a href="https://www.facebook.com/profile.php?id=100010479217783" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+      <a href="https://github.com/isOst" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/igor-ostapov-38a25b107?trk=nav_responsive_tab_profile" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    </p>
+  </div>
+
+<!-- Container with snowfall -->
+  <div id = "snowfall" class = "container snowfall">
+    <div class = "row">
+      <div class="col-xs-12">
+        <canvas id="canvas"></canvas>
+        <h1 id = "header">Merry Christmas!</h1>
+        <img src="images/img.png" id = "image">
+      </div>
+    </div>
+  </div>
+
+<!-- Settings bar -->
+  <div id = "container" class="container-fluid set_buttons">
+    <div class="row">
+      <div class = "col-xs-12 buttons">
+        <p id = "start">Let it snow!</p>
+        <p id = 'openset'>Settings</p>
+      </div>
+    </div>
+    <div id = "settings" class = "settings">
+      <div class="row">
+      <!-- background-color picker -->
+        <div id = "background" class = "col-xs-12 col-sm-4 col-md-3 col-md-offset-2">
+          <div class="row">
+            <h1>Set a background</h1>
+          </div>
+          <div class="row">
+            <div class="group">
+            <span class="background-changer" data-bg="rgba(0, 204, 255, 0.6)">
+              <svg height="40" width="40">
+                <circle cx="20" cy="20" r="17" stroke="white" stroke-width="3" fill="rgba(0, 204, 255, 0.6)" />
+              </svg>
+            </span>
+            <span class="background-changer" data-bg="rgba(128, 170, 255, 0.8)">
+              <svg height="40" width="40">
+                <circle cx="20" cy="20" r="17" stroke="white" stroke-width="3" fill="rgba(128, 170, 255, 0.8)" />
+              </svg>
+            </span>
+            <span class="background-changer" data-bg="rgba(102, 153, 255, 0.8)" data-bg="rgba(0, 204, 255, 0.6)">
+              <svg height="40" width="40">
+                <circle cx="20" cy="20" r="17" stroke="white" stroke-width="3" fill="rgba(102, 153, 255, 0.8)" />
+              </svg>
+            </span>
+            <span class="background-changer" data-bg="rgba(35, 35, 144, 0.7)">
+              <svg height="40" width="40">
+                <circle cx="20" cy="20" r="17" stroke="white" stroke-width="3" fill="rgba(35, 35, 144, 0.7)" />
+              </svg>
+            </span>
+            <span class="background-changer" data-bg="rgba(20, 20, 82, 0.7)">
+              <svg height="40" width="40">
+                <circle cx="20" cy="20" r="17" stroke="white" stroke-width="3" fill="rgba(20, 20, 82, 0.7)" />
+              </svg>
+            </span>
+            </div>
+          </div>
+        </div>
+        <!-- end background-color picker -->
+
+        <!-- speed and snow amount -->
+        <div class = "speed col-xs-12 col-sm-4 col-md-3">
+          <div class="row">
+              <h1>Speed</h1>
+              <span><input type="range" id = "speed" class = "input1" min="0" max="30" step="5"></span>
+          </div>
+          <div class="row">
+              <h1>Snow particles amount</h1>
+              <input type="range" id = "amount" min="25" max="150" step="5">
+          </div>
+        </div>
+        <!-- end speed and snow amount -->
+
+        <!-- melody and voice -->
+        <div class = "col-xs-12 col-sm-4 col-md-2 sound">
+          <div class="row">
+              <h1>Sound</h1>
+              <audio id = 'audio'></audio>
+              <ul id = "tracklist" class="list-unstyled">
+                  <div class = "track"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Let it Snow</div>
+                  <div class = "track"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Jingle Bells</div>
+                  <div class = "track"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Last Christmas</div>
+                  <div class = "track"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Marshmallow World</div>
+                  <div id = "stop-track"><i class="fa fa-volume-off" aria-hidden="true"></i> Mute</div>
+              </ul>
+          </div>
+        </div>
+        <!-- end melody and voice -->
+      </div>
+    </div>
+  </div>
+
+<!-- Script -->
+  <script type="text/javascript" src = "js/snowfall.js"></script>
+</body>
+</html>

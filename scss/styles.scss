@@ -1,0 +1,24 @@
+/* Import styles */
+@import 'mixins';
+@import 'header';
+@import 'settings';
+@import 'buttons';
+@import 'img';
+
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100);
+@import url(https://fonts.googleapis.com/css?family=Coming+Soon);
+
+
+body {
+	position: relative;
+	background: white;
+	height: 100vh;
+}
+
+.snowfall {
+	background: rgba(44, 109, 200, 0.6);
+	height: 100%;
+	overflow: hidden;
+	@include box-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+}

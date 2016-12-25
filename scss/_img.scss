@@ -1,0 +1,49 @@
+/* Default styles for mobile screens */
+img {
+	display: block;
+	position: fixed;
+	bottom: 150px;
+	left: 15%;
+	width: 70%;
+	height: auto;
+	z-index: 3;
+	@include respond-to(medium-screens) {
+		width: 60%;
+		left: 20%;
+		bottom: 150px;
+	}
+	@include respond-to(wide-screens) {
+		width: 45%;
+		left: 30%;
+		bottom: 150px;
+	}
+	@include respond-to(large-screens) {
+		width: 30%;
+		left: 35%;
+		bottom: 180px;
+	}
+}
+
+#header {
+	z-index: 5;
+	display: block;
+	position: fixed;
+	top: 17%;
+	left: 17%;
+	font-family: 'Coming Soon', cursive;
+	font-size: 28px;
+	color: white;
+	@include text-shadow(1px 1px rgba(0, 0, 0, 0.7));
+	@include respond-to(medium-screens) {
+		left: 30%;
+		font-size: 30px;
+	}
+	@include respond-to(wide-screens) {
+		left: 35%;
+		font-size: 36px;
+	}
+	@include respond-to(large-screens) {
+		left: 39%;
+		font-size: 45px;
+	}
+}

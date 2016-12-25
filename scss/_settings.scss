@@ -1,0 +1,65 @@
+.settings {
+	height: 250px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	h1 {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 100;
+		font-size: 21px;
+		margin: 10px 0 25px 25px;
+	}
+	.group {
+		margin-left: 12px;
+	}
+	span {
+		margin-left: 5px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	svg {
+		@include border-radius(20px);
+		@include box-shadow(0 0 2px rgba(0, 0, 0, 0.6));
+		&:hover {
+			@include box-shadow(0 0 5px rgba(0, 61, 153, 0.8));
+		}
+		.current {
+			@include box-shadow(0 0 5px rgba(0, 61, 153, 0.8));
+		}
+	}
+	input {
+		width: 200px;
+		margin-left: 40px;
+		margin-bottom: 25px;
+		&:hover {
+			cursor: pointer;
+		}
+		&:active {
+			cursor: pointer;
+		}
+	}
+	.input1 {
+		margin-top: -20px;
+	}
+
+	.sound {
+		color: rgba(0, 0, 0, 0.6);
+		.track {
+			cursor: pointer;
+			text-align: left;
+			&:hover {
+				color: rgb(0, 0, 0);
+				cursor: pointer;
+			}
+			&:active {
+				color: rgb(0, 0, 0);
+			}
+			.current {
+				color: rgb(0, 0, 0);
+			}
+		}
+		i {
+			margin: 0 12px 15px 35px;
+		}
+	}
+}
