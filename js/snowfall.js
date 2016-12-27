@@ -106,6 +106,7 @@
 
 
 	var letItSnow = function() {
+		clear();
 		setcontainer.style.height = '80px';
 		img.style.display = "block";
 		header.style.display = "block";
